@@ -49,7 +49,7 @@ body {background-color: powderblue;}/*set the background color*/
 <input type="radio" name="gender" value="f" required >Female
 </td>
 <td>Date of Birth: </td>
-<td><input type="text" name="dateofbirth" placeholder="dd/mm/yyyy" ></td>
+<td><input type="text" name="dateofbirth" placeholder="yyyy/mm/dd" ></td>
 </tr>
 
 <tr>
@@ -64,7 +64,7 @@ body {background-color: powderblue;}/*set the background color*/
 <td>Address: </td>
 <td><input type="text" name="address" ></td>
 <td>Expected Date:</td>
-<td><input type="text" name="expecteddate" placeholder="dd/mm/yyyy" ></td>
+<td><input type="text" name="expecteddate" placeholder="yyyy/mm/dd" ></td>
 </tr>
 
 <tr>
