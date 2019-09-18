@@ -5,19 +5,19 @@
 <style type="text/css">
 .style1{
     border-width:0;
-    border:solid gray 10px;
-    width:73%;
+    border:solid gray 3px;
+    width:55%;
     border-radius:5px;
     margin:5px auto;
     background:blue;
     color:yellow;
     text-align:centre;
-    font-size:50px;
+    font-size:30px;
 }
 .style2{
     border-width:0;
-    border:solid gray 10px;
-    width:75%;
+    border:solid gray 5px;
+    width:60%;
     border-radius:5px;
     margin:5px auto;
     background:white;
@@ -89,8 +89,8 @@ body {background-color: powderblue;}/*set the background color*/
 </table>
 </form>
 
-<hr size = 10 color = red width = 75%>
-<hr size = 10 color = silver width = 75%>
+
+<hr size = 10 color = silver width = 60%>
 
 
 
