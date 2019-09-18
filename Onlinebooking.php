@@ -49,7 +49,7 @@ $timeslot = $_POST['timeslot'];
             , $dateofbirth, $phonenumber, $email, $address, $expecteddate, $city, $timeslot);
             $pst->execute();
 
-            echo "New Record Added Successfully";
+            echo "Your Booking is Confirmed!";
             }
                 else{
                     echo "This Time is Booked up!";
