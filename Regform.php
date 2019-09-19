@@ -33,14 +33,27 @@ body {background-color: powderblue;}/*set the background color*/
 <td>Firstname: </td>
 <td><input type="text" name="firstname" placeholder="Firstname" required ></td>
 <td>Motivation: </td>
-<td><input type="text" name="motivation" required ></td>
+<td>
+<select name="motivation">
+<option value="Curiosity">Curiosity</option>
+<option value="Recovering">Recovering</option>
+<option value="Relaxing">Relaxing</option>
+<option value="Secret" >Secret</option>
+</select>
+</td>
 </tr>
 
 <tr>
 <td>Surname: </td>
 <td><input type="text" name="surname" placeholder="Surname" required ></td>
 <td>Type of Massage: </td>
-<td><input type="text" name="typeofmassage" required ></td>
+<td>
+<select name="typeofmassage">
+<option value="Sports Massage">Sports Massage</option>
+<option value="Reflexology">Reflexology</option>
+<option value="Thai Massage">Thai Massage</option>
+</select>
+</td>
 </tr>
 
 <tr>

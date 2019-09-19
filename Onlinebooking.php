@@ -29,34 +29,34 @@ $timeslot = $_POST['timeslot'];
             die('Connection Error('.mysqli_connect_errno().')'.mysqli_connect_error());
         }
         else{
-            $SELECT = "SELECT timeslot From customer Where timeslot = ? Limit 1";
+            $SELECT = "SELECT expecteddate From customer Where timeslot = ? Limit 1";
             $INSERT = "INSERT Into customer (firstname, motivation, surname, typeofmassage, gender
             , dateofbirth, phonenumber, email, address, expecteddate, city, timeslot
             ) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
                 //prepare statement
                 $pst = $conn->prepare($SELECT);
-                $pst->bind_param("s", $timeslot);
+                $pst->bind_param("s", $expecteddate);
                 $pst->execute();
-                $pst->bind_result($timeslot);
+                $pst->bind_result($expecteddate);
                 $pst->store_result();
                 $rnum = $pst->num_rows;
             
                 if($rnum == 0){
-                $pst->close();
-            $pst = $conn->prepare($INSERT);
-            $pst->bind_param("ssssssssssss", $firstname, $motivation, $surname, $typeofmassage, $gender
-            , $dateofbirth, $phonenumber, $email, $address, $expecteddate, $city, $timeslot);
-            $pst->execute();
+                    $pst->close();
+                    $pst = $conn->prepare($INSERT);
+                    $pst->bind_param("ssssssssssss", $firstname, $motivation, $surname, $typeofmassage, $gender
+                    , $dateofbirth, $phonenumber, $email, $address, $expecteddate, $city, $timeslot);
+                    $pst->execute();
 
-            echo "Your Booking is Confirmed!";
-            }
+                    echo "Your Booking is Confirmed!";
+                }
                 else{
                     echo "This Time is Booked up!";
                 }
                 $pst->close();
                 $conn->close();
-            }
+        }
     }
     else{
         echo "Fields Are Required";
