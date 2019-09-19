@@ -52,6 +52,7 @@ body {background-color: powderblue;}/*set the background color*/
 <option value="Sports Massage">Sports Massage</option>
 <option value="Reflexology">Reflexology</option>
 <option value="Thai Massage">Thai Massage</option>
+<option value="Swedish Massage">Swedish Massage</option>
 </select>
 </td>
 </tr>
