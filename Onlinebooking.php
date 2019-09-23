@@ -29,7 +29,7 @@ $timeslot = $_POST['timeslot'];
             die('Connection Error('.mysqli_connect_errno().')'.mysqli_connect_error());
         }
         else{
-            $SELECT = "SELECT expecteddate From customer Where timeslot = ? Limit 1";
+            $SELECT = "SELECT expecteddate From customer Where expecteddate = ? Limit 1";
             $INSERT = "INSERT Into customer (firstname, motivation, surname, typeofmassage, gender
             , dateofbirth, phonenumber, email, address, expecteddate, city, timeslot
             ) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
