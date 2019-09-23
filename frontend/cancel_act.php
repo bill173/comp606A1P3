@@ -3,7 +3,7 @@ include("../backend/dbconnect.php");
 
 
 
-$canceledTime = time();
+$canceledTime = time()+36000;
 
 
 
@@ -17,6 +17,10 @@ $row=mysqli_fetch_assoc($result);
 $date=$row['date'];
 $time=$row['time'];
 
+
+
+
+
 $a=strtotime($date.' '. $time,time());
 
 
@@ -29,9 +33,10 @@ $finaltime = $a-$canceledTime;
 
 
 
+
 if($email == $row['email']){
     if($finaltime < 86400){
-    $sql="UPDATE `customer` SET `status`='',`canceledTime`='$canceledTime ',`lessThan24Hours`='No' WHERE email='$email'"; 
+    $sql="UPDATE `customer` SET `status`='',`canceledTime`='$canceledTime ',`lessThan24Hours`='yes' WHERE email='$email'"; 
     //echo $sql;
     $result=mysqli_query($link,$sql);
     if($result){
@@ -43,7 +48,7 @@ if($email == $row['email']){
     
 
 }else{
-    $sql="UPDATE `customer` SET `status`='canceled',`canceledTime`='',`lessThan24Hours`='yes' WHERE email='$email'"; 
+    $sql="UPDATE `customer` SET `status`='canceled',`canceledTime`='',`lessThan24Hours`='no' WHERE email='$email'"; 
     //echo $sql;
     $result=mysqli_query($link,$sql);
     if($result){
