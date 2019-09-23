@@ -42,12 +42,6 @@ include("header.php");
         
       
         </p>
-        <form action=""  class="content1">
-        
-        <input type="button" class="button" value="Cancel">
-       
-
-        </form>
         
     </div>
     

@@ -44,7 +44,7 @@ if($email == $row['email']){
 
 }else{
     $sql="UPDATE `customer` SET `status`='canceled',`canceledTime`='',`lessThan24Hours`='yes' WHERE email='$email'"; 
-    echo $sql;
+    //echo $sql;
     $result=mysqli_query($link,$sql);
     if($result){
         echo "<script>
